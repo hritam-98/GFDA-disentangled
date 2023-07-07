@@ -2,7 +2,7 @@ import torch
 import numpy as np
 import sys
 sys.path.append('..')
-from TedSeg import *
+from Seg import *
 from .fda import create_fda_batch
 from .dataset import *
 from .fda import *
