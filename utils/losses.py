@@ -60,7 +60,7 @@ class MinEntLoss(nn.Module):
         
         return self.weight* ent.mean()
 
-def cofo_loss(mode='supervised', mint_ent_w=0.005, margin=0.3):
+def fda_loss(mode='supervised', mint_ent_w=0.005, margin=0.3):
     return {
         'segmentation': SegLoss(mode=mode, mint_ent_w=mint_ent_w),
         'contrastive': nn.CosineEmbeddingLoss(margin=margin)
